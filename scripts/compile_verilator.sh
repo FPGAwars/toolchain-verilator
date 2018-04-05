@@ -40,3 +40,6 @@ make opt -j$J CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG
 # -- Install the programs into the package folder
 mkdir $PACKAGE_DIR/$NAME/bin
 cp ../bin/verilator_bin $PACKAGE_DIR/$NAME/bin/verilator$EXE
+
+# -- Copy share files
+cp -r $WORK_DIR/build-data/share $PACKAGE_DIR/$NAME

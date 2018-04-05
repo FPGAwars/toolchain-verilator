@@ -25,9 +25,6 @@ if [ $ARCH != "darwin" ]; then
   export CXX=$HOST-g++
 fi
 
-# -- Generate the new configure
-sh autoconf.sh
-
 # -- Prepare for building
 ./configure --build=$BUILD --host=$HOST CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG_LDFLAGS" $CONFIG_FLAGS
 
@@ -37,5 +34,3 @@ make -j$J
 # -- Install the programs into the package folder
 make install prefix=$PACKAGE_DIR/$NAME/
 
-# -- Copy vlib/system.v
-cp -r $WORK_DIR/build-data/vlib $PACKAGE_DIR/$NAME

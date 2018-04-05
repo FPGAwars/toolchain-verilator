@@ -38,7 +38,7 @@ if [ $ARCH == "windows_x86" ]; then
   HOST="i686-w64-mingw32"
   CONFIG_CFLAGS="-O2"
   CONFIG_CXXFLAGS="-O2"
-  CONFIG_LDFLAGS="-static"
+  CONFIG_LDFLAGS="-static -static-libstdc++"
 fi
 
 if [ $ARCH == "windows_amd64" ]; then
@@ -46,7 +46,7 @@ if [ $ARCH == "windows_amd64" ]; then
   HOST="x86_64-w64-mingw32"
   CONFIG_CFLAGS="-O2"
   CONFIG_CXXFLAGS="-O2"
-  CONFIG_LDFLAGS="-static"
+  CONFIG_LDFLAGS="-static -static-libstdc++"
 fi
 
 if [ $ARCH == "darwin" ]; then

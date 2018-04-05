@@ -30,11 +30,13 @@ if [ ${ARCH:0:7} == "windows" ]; then
 fi
 
 # -- Prepare for building
-./configure --build=$BUILD --host=$HOST CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG_LDFLAGS" $CONFIG_FLAGS
+./configure --build=$BUILD --host=$HOST $CONFIG_FLAGS
 
 # -- Compile it
-make -j$J
+cd src
+echo CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG_LDFLAGS"
+make opt -j$J CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG_LDFLAGS"
 
 # -- Install the programs into the package folder
-make install prefix=$PACKAGE_DIR/$NAME/
-
+mkdir $PACKAGE_DIR/$NAME/bin
+cp ../bin/verilator_bin $PACKAGE_DIR/$NAME/bin/verilator$EXE

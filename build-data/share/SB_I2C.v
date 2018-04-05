@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSED */
+/* verilator lint_off UNDRIVEN */
 (* blackbox *)
 module SB_I2C(
 	input  SBCLKI,
@@ -40,3 +42,5 @@ module SB_I2C(
 parameter I2C_SLAVE_INIT_ADDR = "0b1111100001";
 parameter BUS_ADDR74 = "0b0001";
 endmodule
+/* verilator lint_on UNUSED */
+/* verilator lint_on UNDRIVEN */

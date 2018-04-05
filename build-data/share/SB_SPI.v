@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSED */
+/* verilator lint_off UNDRIVEN */
 (* blackbox *)
 module SB_SPI (
 	input  SBCLKI,
@@ -51,3 +53,5 @@ module SB_SPI (
 );
 parameter BUS_ADDR74 = "0b0000";
 endmodule
+/* verilator lint_on UNUSED */
+/* verilator lint_on UNDRIVEN */

@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSED */
+/* verilator lint_off UNDRIVEN */
 (* blackbox *)
 module SB_MAC16 (
 	input CLK,
@@ -49,3 +51,5 @@ parameter MODE_8x8 = 1'b0;
 parameter A_SIGNED = 1'b0;
 parameter B_SIGNED = 1'b0;
 endmodule
+/* verilator lint_on UNUSED */
+/* verilator lint_on UNDRIVEN */

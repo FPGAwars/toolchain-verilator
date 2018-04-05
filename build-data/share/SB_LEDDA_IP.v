@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSED */
+/* verilator lint_off UNDRIVEN */
 (* blackbox *)
 module SB_LEDDA_IP(
 	input LEDDCS,
@@ -23,3 +25,5 @@ module SB_LEDDA_IP(
 	output LEDDON
 );
 endmodule
+/* verilator lint_on UNUSED */
+/* verilator lint_on UNDRIVEN */

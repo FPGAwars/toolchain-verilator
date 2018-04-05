@@ -1,3 +1,5 @@
+/* verilator lint_off UNUSED */
+/* verilator lint_off UNDRIVEN */
 (* blackbox *)
 module SB_SPRAM256KA(
 	input [13:0] ADDRESS,
@@ -12,3 +14,5 @@ module SB_SPRAM256KA(
 	output [15:0] DATAOUT
 );
 endmodule
+/* verilator lint_on UNUSED */
+/* verilator lint_on UNDRIVEN */

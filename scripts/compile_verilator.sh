@@ -25,6 +25,10 @@ if [ $ARCH != "darwin" ]; then
   export CXX=$HOST-g++
 fi
 
+if [ ${ARCH:0:7} == "windows" ]; then
+  cp $WORK_DIR/build-data/flex/FlexLexer.h $BUILD_DIR/$VERILATOR/src/.
+fi
+
 # -- Prepare for building
 ./configure --build=$BUILD --host=$HOST CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG_LDFLAGS" $CONFIG_FLAGS
 

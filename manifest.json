@@ -1,0 +1,47 @@
+{
+  "toolchain-verilator":
+    [
+      {
+        "url": "https://github.com/FPGAwars/toolchain-verilator/releases/download/v1.0.0/toolchain-verilator-darwin-1.0.0.tar.gz",
+        "sha1": "ba764e64f7e664bb6bdddf11be1d1ce8a7575d86",
+        "version": "1.0.0",
+        "system": ["darwin", "darwin_x86_64", "darwin_i386"]
+      },
+      {
+        "url": "https://github.com/FPGAwars/toolchain-verilator/releases/download/v1.0.0/toolchain-verilator-linux_aarch64-1.0.0.tar.gz",
+        "sha1": "0fbd5a19f85b82f3dfa634b36291f2c79b3ffcf8",
+        "version": "1.0.0",
+        "system": ["linux_aarch64"]
+      },
+      {
+        "url": "https://github.com/FPGAwars/toolchain-verilator/releases/download/v1.0.0/toolchain-verilator-linux_armv7l-1.0.0.tar.gz",
+        "sha1": "f678f7a0f50cb1f0beb076ea62aca98fca04dedf",
+        "version": "1.0.0",
+        "system": ["linux_armv7l"]
+      },
+      {
+        "url": "https://github.com/FPGAwars/toolchain-verilator/releases/download/v1.0.0/toolchain-verilator-linux_i686-1.0.0.tar.gz",
+        "sha1": "bf4e167a900702b74d4fc36513b4f8c4a5fb021d",
+        "version": "1.0.0",
+        "system": ["linux_i686"]
+      },
+      {
+        "url": "https://github.com/FPGAwars/toolchain-verilator/releases/download/v1.0.0/toolchain-verilator-linux_x86_64-1.0.0.tar.gz",
+        "sha1": "297a0b94cb4eb05fe2a2399c044f55eca06b26ec",
+        "version": "1.0.0",
+        "system": ["linux_x86_64"]
+      },
+      {
+        "url": "https://github.com/FPGAwars/toolchain-verilator/releases/download/v1.0.0/toolchain-verilator-windows_x86-1.0.0.tar.gz",
+        "sha1": "ca3e28d3924994578d7073ad63b5374c8d147a65",
+        "version": "1.0.0",
+        "system": ["windows", "windows_x86"]
+      },
+      {
+        "url": "https://github.com/FPGAwars/toolchain-verilator/releases/download/v1.0.0/toolchain-verilator-windows_amd64-1.0.0.tar.gz",
+        "sha1": "74a6915844b3b4a4286cd49bf5f996cea79c68fa",
+        "version": "1.0.0",
+        "system": ["windows_amd64"]
+      }
+    ]
+}

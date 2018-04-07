@@ -1,6 +1,6 @@
 # Toolchain-verilator
 
-[![Build Status](https://travis-ci.org/FPGAwars/toolchain-verilator.svg?branch=v1.1.0)](https://travis-ci.org/FPGAwars/toolchain-verilator)
+[![Build Status](https://travis-ci.org/FPGAwars/toolchain-verilator.svg)](https://travis-ci.org/FPGAwars/toolchain-verilator)
 
 ## Introduction
 
@@ -34,6 +34,7 @@ Final packages will be deployed in the **\_packages/build_ARCH/** directories.
 ## Authors
 
 * [Miodrag Milanovic](https://github.com/mmicko)
+* [Jesús Arroyo Torrens](https://github.com/Jesus89)
 
 ## License
 

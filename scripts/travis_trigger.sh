@@ -25,6 +25,6 @@ curl -s -X POST \
   -H "Travis-API-Version: 3" \
   -H "Authorization: token $TOKEN" \
   -d "$body" \
-  https://api.travis-ci.org/repo/FPGAwars%2Ftoolchain-iverilog/requests
+  https://api.travis-ci.org/repo/FPGAwars%2Ftoolchain-verilator/requests
 
 echo "\n> Done!"

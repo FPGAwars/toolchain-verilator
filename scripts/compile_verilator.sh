@@ -26,7 +26,7 @@ if [ $ARCH != "darwin" ]; then
 fi
 
 if [ ${ARCH:0:7} == "windows" ]; then
-  cp $WORK_DIR/build-data/flex/FlexLexer.h $BUILD_DIR/$VERILATOR/src/.
+  cp /usr/include/FlexLexer.h $BUILD_DIR/$VERILATOR/src/.
 fi
 
 # -- Prepare for building

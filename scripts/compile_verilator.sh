@@ -21,8 +21,8 @@ rsync -a $VERILATOR $BUILD_DIR --exclude .git
 cd $BUILD_DIR/$VERILATOR
 
 if [ $ARCH != "darwin" ]; then
-  export CC=$HOST-gcc
-  export CXX=$HOST-g++
+  export CC="$HOST-gcc $CONFIG_HOST"
+  export CXX="$HOST-g++ $CONFIG_HOST"
 fi
 
 if [ ${ARCH:0:7} == "windows" ]; then
@@ -30,12 +30,17 @@ if [ ${ARCH:0:7} == "windows" ]; then
 fi
 
 # -- Prepare for building
-./configure --build=$BUILD --host=$HOST $CONFIG_FLAGS
+./configure --build=$BUILD --host=$HOST
 
 # -- Compile it
 cd src
-echo CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG_LDFLAGS"
-make opt -j$J CFLAGS="$CONFIG_CFLAGS" CXXFLAGS="$CONFIG_CFLAGS" LDFLAGS="$CONFIG_LDFLAGS"
+echo CFLAGS="$MAKE_CFLAGS" CXXFLAGS="$MAKE_CXXFLAGS" LDFLAGS="$MAKE_LDFLAGS"
+make opt -j$J CFLAGS="$MAKE_CFLAGS" CXXFLAGS="$MAKE_CXXFLAGS" LDFLAGS="$MAKE_LDFLAGS"
+
+# -- Test the generated executables
+if [ $ARCH != "darwin" ]; then
+  test_bin ../bin/verilator_bin
+fi
 
 # -- Install the programs into the package folder
 mkdir $PACKAGE_DIR/$NAME/bin

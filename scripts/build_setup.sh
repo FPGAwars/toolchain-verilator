@@ -17,17 +17,15 @@ fi
 
 if [ $ARCH == "linux_armv7l" ]; then
   HOST="arm-linux-gnueabihf"
-  CONFIG_CFLAGS="-O2"
-  CONFIG_CXXFLAGS="-O2"
-  CONFIG_LDFLAGS="-static-libstdc++"
+  MAKE_CFLAGS="-O2"
+  MAKE_CXXFLAGS="-O2"
   MAKE_LDFLAGS="-static"
 fi
 
 if [ $ARCH == "linux_aarch64" ]; then
   HOST="aarch64-linux-gnu"
-  CONFIG_CFLAGS="-O2"
-  CONFIG_CXXFLAGS="-O2"
-  CONFIG_LDFLAGS="-static-libstdc++"
+  MAKE_CFLAGS="-O2"
+  MAKE_CXXFLAGS="-O2"
   MAKE_LDFLAGS="-static"
 fi
 

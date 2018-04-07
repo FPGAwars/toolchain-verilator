@@ -1,6 +1,6 @@
 #!/bin/bash
 ##################################
-#   Verilator toolchain builder   #
+#   Verilator toolchain builder  #
 ##################################
 
 # Generate toolchain-verilator-arch-ver.tar.gz from source code
